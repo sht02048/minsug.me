@@ -4,14 +4,21 @@ import RecentWriting from "./RecentWriting.astro";
 ---
 
 <Header />
-<main class="mt-32">
-  <span class="mb-5 block font-medium sm:mb-6">Today</span>
+<div class="mb-6 block font-medium sm:mb-6">Today</div>
+<p class="leading-7 text-secondary">
+  뉴로클에서 프론태앤드 개발자로 일하고 있습니다. 단정함을 코드에 담는 것을
+  좋아하며 최근에는 <br /> 애니메이션을 공부하고 있습니다.
+</p>
+<div class="mt-16 sm:mt-32">
+  <RecentWriting />
+</div>
+<footer class="mt-16">
+  <span class="mb-6 block font-medium">More</span>
   <p class="text-secondary">
-    I work as a design engineer at Linear. I like to build things for designers
-    and developers, and think deeply about the user interface, how it looks,
-    feels, behaves.
+    제 작업과 코드는 <a
+      class="underline"
+      target="_blank"
+      href="https://github.com/sht02048">Github</a
+    >에서 확인할 수 있습니다.
   </p>
-  <div class="mt-16 sm:mt-32">
-    <RecentWriting />
-  </div>
-</main>
+</footer>
