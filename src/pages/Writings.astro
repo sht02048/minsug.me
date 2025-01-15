@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+
+import Header from "../components/Header.astro";
+import WritingList from "../components/WritingList";
+import MainLayout from "../layouts/MainLayout.astro";
+
+const writings = await getCollection("writings");
+---
+
+<MainLayout>
+  <Header />
+  <WritingList writings={writings} client:load />
+</MainLayout>
