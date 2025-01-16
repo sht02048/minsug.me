@@ -5,10 +5,10 @@ const writings = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/writings" }),
   schema: z.object({
     title: z.string(),
-    tags: z.array(z.string()).optional(),
+    tags: z.array(z.string()),
     date: z.date(),
-    description: z.string().optional(),
-    thumbnail: z.string().optional(),
+    description: z.string(),
+    thumbnail: z.string(),
   }),
 });
 
