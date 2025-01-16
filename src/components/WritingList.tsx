@@ -1,4 +1,5 @@
 import type { CollectionEntry } from "astro:content";
+import PostLink from "./PostLink.astro";
 
 type Props = {
   writings: CollectionEntry<"writings">[];
@@ -8,6 +9,7 @@ type writingListInfo = {
   month: string;
   day: string;
   slug: string;
+  description: string;
 };
 
 export default function WritingList({ writings }: Props) {
@@ -18,11 +20,12 @@ export default function WritingList({ writings }: Props) {
       const day = String(cur.data.date.getDate()).padStart(2, "0");
       const title = cur.data.title;
       const slug = cur.id.split("/").pop() as string;
+      const description = cur.data.description as string;
 
       if (acc[year]) {
-        acc[year].push({ title, month, day, slug });
+        acc[year].push({ title, month, day, slug, description });
       } else {
-        acc[year] = [{ title, month, day, slug }];
+        acc[year] = [{ title, month, day, slug, description }];
       }
 
       return acc;
@@ -30,21 +33,19 @@ export default function WritingList({ writings }: Props) {
   );
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-7 sm:gap-4">
       {writingsByYear.map(([year, writings]) =>
         writings.map((writing, index) => {
           return (
-            <div className="flex justify-between w-full items-center">
-              <div className="basis-1/5">
+            <div className="flex justify-between w-full items-start">
+              <div className="basis-1/5 sm:py-3 hidden sm:block">
                 {index === 0 && <span>{year}</span>}
               </div>
-              <a
-                className="flex basis-4/5 justify-between font-medium hover:bg-[#191918] sm:py-3 px-3 cursor-pointer"
-                href={writing.slug}
-              >
-                <span>{writing.title}</span>
-                <span className="text-secondary text-start min-w-16">{`${writing.month}. ${writing.day}.`}</span>
-              </a>
+              <PostLink
+                link={writing.slug}
+                title={writing.title}
+                description={writing.description}
+              />
             </div>
           );
         }),
