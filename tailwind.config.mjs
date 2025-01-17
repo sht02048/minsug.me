@@ -47,6 +47,13 @@ export default {
               color: "#eeeeec",
               fontWeight: 400,
             },
+            pre: {
+              paddingRight: "1.5rem",
+              paddingLeft: "1.5rem",
+              backgroundColor: "var(--shiki-dark-bg)",
+              color: "var(--shiki-dark)",
+              border: "1px solid #374151",
+            },
           },
         },
       },
