@@ -1,0 +1,33 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, render, type CollectionEntry } from "astro:content";
+
+import Prose from "../components/Prose.astro";
+import Header from "../components/Header.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../mdxComponents/Heading.astro";
+
+type Props = CollectionEntry<"writings">;
+
+export const getStaticPaths = (async () => {
+  const writings = await getCollection("writings");
+  return writings.map((writing) => {
+    const slug = writing.id.split("/").pop();
+
+    return {
+      params: { slug },
+      props: writing,
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const writing = Astro.props;
+const { Content } = await render(writing);
+---
+
+<MainLayout>
+  <Header />
+  <Prose>
+    <Content components={{ h2: Heading }} />
+  </Prose>
+</MainLayout>
