@@ -18,7 +18,7 @@ export default {
               marginLeft: 0,
               marginBottom: 32,
               fontWeight: 600,
-              fontSize: "1rem",
+              fontSize: "1.2rem",
             },
             h2: {
               margin: 0,

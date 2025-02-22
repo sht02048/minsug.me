@@ -1,0 +1,19 @@
+---
+import type { Project as ProjectType } from "../types/project";
+
+type Props = ProjectType;
+
+const { title, link, description, isDeployed } = Astro.props;
+---
+
+<a
+  href={link}
+  target="_blank"
+  class="-mx-3 flex flex-col rounded-md px-3 no-underline hover:bg-[#191918] sm:py-3 cursor-pointer"
+>
+  <div class="flex items-center gap-2">
+    <span>{title}</span>
+    {isDeployed && <div class="size-1 bg-green-400 rounded-full" />}
+  </div>
+  <p class="text-secondary">{description}</p>
+</a>
