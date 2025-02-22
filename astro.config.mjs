@@ -9,6 +9,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://minsug.me",
   integrations: [react(), tailwind(), mdx()],
   markdown: {
     remarkPlugins: [remarkBreaks],
