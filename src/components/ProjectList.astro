@@ -1,0 +1,26 @@
+---
+import Project from "./Project.astro";
+import { TO_IN_AND_B, LANGUAGE_SYSTEM, KROSS_CUTTING } from "../consts/project";
+---
+
+<span class="mb-5 block font-medium sm:mb-4">Project</span>
+<div class="flex flex-col gap-7 sm:gap-4">
+  <Project
+    title={TO_IN_AND_B.title}
+    description={TO_IN_AND_B.description}
+    link={TO_IN_AND_B.link}
+    isDeployed={TO_IN_AND_B.isDeployed}
+  />
+  <Project
+    title={LANGUAGE_SYSTEM.title}
+    description={LANGUAGE_SYSTEM.description}
+    link={LANGUAGE_SYSTEM.link}
+    isDeployed={LANGUAGE_SYSTEM.isDeployed}
+  />
+  <Project
+    title={KROSS_CUTTING.title}
+    description={KROSS_CUTTING.description}
+    link={KROSS_CUTTING.link}
+    isDeployed={KROSS_CUTTING.isDeployed}
+  />
+</div>

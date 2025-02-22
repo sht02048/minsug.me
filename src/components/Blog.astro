@@ -1,14 +1,18 @@
 ---
 import Header from "./Header.astro";
 import RecentWriting from "./RecentWriting.astro";
+import ProjectList from "./ProjectList.astro";
 ---
 
 <Header />
-<div class="mb-6 block font-medium sm:mb-6">Today</div>
 <p class="leading-7 text-secondary">
-  뉴로클에서 프론태앤드 개발자로 일하고 있습니다. 단정함을 코드에 담는 것을
-  좋아하며 최근에는 <br /> 애니메이션을 공부하고 있습니다.
+  뉴로클에서 Neuro-T를 개발하고 있습니다. 단정함을 코드에 담는 것을 좋아하며
+  복잡함을 간단 명료하게 풀어낼때 희열을 느낍니다. 최근에는 상호작용과
+  애니메이션을 공부하고 있습니다.
 </p>
+<div class="mt-16 sm:mt-32">
+  <ProjectList />
+</div>
 <div class="mt-16 sm:mt-32">
   <RecentWriting />
 </div>
