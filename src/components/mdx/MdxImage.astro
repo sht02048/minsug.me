@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets";
+
+const { src, alt, width = 500, height = 500 } = Astro.props;
+---
+
+<Image
+  src={src}
+  alt={alt}
+  width={width}
+  height={height}
+  class="mx-auto mb-0 mt-8 rounded-md"
+/>
+{
+  alt !== "" && (
+    <span class="mb-8 mt-2 block w-full text-center text-sm text-gray-500 dark:text-gray-400">
+      {alt}
+    </span>
+  )
+}
