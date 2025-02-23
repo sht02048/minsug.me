@@ -1,0 +1,11 @@
+---
+const heading = Astro.props;
+const headingId: string = heading.id;
+const trimmedHeading = headingId.replaceAll("-", " ");
+---
+
+<a href={`#${headingId}`} class="mb-4 inline-block w-fit no-underline">
+  <h1 id={headingId}>
+    {trimmedHeading}
+  </h1>
+</a>

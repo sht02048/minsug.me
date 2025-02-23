@@ -14,20 +14,14 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            h1: {
-              marginLeft: 0,
-              marginBottom: 32,
-              fontWeight: 600,
-              fontSize: "1.2rem",
-            },
-            h2: {
+            "h1, h2, h3": {
               margin: 0,
               fontSize: "1rem",
               fontWeight: 600,
               scrollMarginTop: "5rem",
+              textTransform: "capitalize",
             },
             p: {
-              margin: 0,
               opacity: 90,
               lineHeight: 1.65,
             },

@@ -1,0 +1,14 @@
+---
+const heading = Astro.props;
+const headingId: string = heading.id;
+const trimmedHeading = headingId.replaceAll("-", " ");
+---
+
+<a
+  href={`#${headingId}`}
+  class="mb-4 mt-16 inline-block w-fit no-underline md:mt-20"
+>
+  <h3 id={headingId}>
+    {trimmedHeading}
+  </h3>
+</a>
