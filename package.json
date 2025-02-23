@@ -11,12 +11,12 @@
     "type-lint": "tsc --pretty --noEmit && eslint --fix"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.0.5",
-    "@astrojs/react": "^4.1.2",
-    "@astrojs/tailwind": "^5.1.4",
+    "@astrojs/mdx": "^4.0.8",
+    "@astrojs/react": "^4.2.0",
+    "@astrojs/tailwind": "^6.0.0",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
-    "astro": "^5.1.2",
+    "astro": "^5.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "remark": "^15.0.1",
