@@ -27,7 +27,7 @@ NextJS는 리액트 서버 컴포넌트(이하 RSC)를 기반으로 하는 SSR �
 > **Static Site Rendering:** 빌드 타임때 HTML이 생성되며 각 요청때마다 재사용한다.
 > **Sever Side Rendering:** 클라이언트가 요청하면 서버에서 생성한 HTML을 전달한다.
 
-![SSR과 SSG는 엄연히 다른 렌더링 방식이다.](/public/images/writings/2024/08/nextJS/image_1.webp)
+![SSR과 SSG는 엄연히 다른 렌더링 방식이다.](/images/writings/2024/08/nextJS/image_1.webp)
 
 Pages 라우터(12 버전 이하)까지만 하더라도 NextJS는 개발자에게 렌더링 방식을 선택할 수 있게했지만 App 라우터(13 버전 이상)부터는 NextJS가 자체적으로 렌더링 방식을 최적화한다.
 
@@ -76,7 +76,7 @@ NextJS의 렌더링 방식을 살펴봤으니 이제는 NextJS가 지원하는 �
 
 리액트에서 컴포넌트는 CSR로 렌더링하지만 NextJS는 상황에 따라 SSR과 CSR 모두 사용한다. SSR로 클라인트 컴포넌트를 렌더링하는 상황은 첫 페이지를 로드할때 이다. 사용자에게 최대한 빨리 페이지를 보여주기 위해서 서버에서 렌더링한 후에 클라이언트에서 hydrate한다. 반면에 CSR로 렌더링되는 경우는 새로고침된 페이지나 다른 라우터로 이동했을 때이다.
 
-![NextJS는 어떻게든 CSR의 단점을 극복하려고 하는 의지가 참 돋보이는 것 같다.](/public/images/writings/2024/08/nextJS/image_2.webp)
+![NextJS는 어떻게든 CSR의 단점을 극복하려고 하는 의지가 참 돋보이는 것 같다.](/images/writings/2024/08/nextJS/image_2.webp)
 
 ## NextJS가 React와 구별되는 지점
 
@@ -96,7 +96,7 @@ NextJS는 어떻게 개발자들의 마음을 사로잡았을까? 어떤 이들�
 
 이외에도 빠른 웹 반응성, 적은 서버 로드 등 여러 장점으로 React,Vue, Angular 삼대장이 프론트앤드를 점령한 이후 CSR은 꾸준하게 사용되었다.
 
-![CSR의 흐름 - 출처: https://prismic.io/blog/client-side-vs-server-side-rendering](/public/images/writings/2024/08/nextJS/image_3.png)
+![CSR의 흐름 - 출처: https://prismic.io/blog/client-side-vs-server-side-rendering](/images/writings/2024/08/nextJS/image_3.png)
 
 그러나, **CSR은 자바스크립트 파일을 모두 다운로드하고 파싱할때까지 어떤 화면도 렌더링되지 않는다는 치명적인 단점**을 갖고 있는데 이는 곧 사용자 리텐션을 낮추는 행위이기 때문이다. 더군더나 UX를 향상시키기 위해 JS 파일 크기는 계속 커져만 갔다.
 
@@ -108,7 +108,7 @@ NextJS는 어떻게 개발자들의 마음을 사로잡았을까? 어떤 이들�
 
 **즉, 서버에서 완성된 화면을 받아서 렌더링하면 된다는 말이다.**
 
-![SSR이 초기 렌더링은 진짜 빠르다.](/public/images/writings/2024/08/nextJS/image_4.webp)
+![SSR이 초기 렌더링은 진짜 빠르다.](/images/writings/2024/08/nextJS/image_4.webp)
 
 그리고 이를 극대화하는 것이 NextJS의 SSG인데 서버에서 만들지도 않고 빌드 타임때 만들어진 결과물을 전달하기 때문이다. 심지어 이를 캐싱해놓고 같은 요청이 들어오면 **캐싱된 값**을 보낸다.
 
@@ -122,7 +122,7 @@ NextJS는 어떻게 개발자들의 마음을 사로잡았을까? 어떤 이들�
 
 NextJS의 단점은 너무나 많은 기능을 가지고 있다는 것이다. 클라이언트와 분리된 서버 컴포넌트에서 API와 데이터 작업을 모두 집행할 수 있기 때문에 어플리케이션의 복잡성이 손쉽게 증가할 수 있다. 그리고 아직 RSC가 안정화되지않은 만큼 NextJS의 안정성도 완전히 확보됐다고 할 수 없다. 매년 업그레드되는 버전마다 나오는 파격적인 기술때문에 학습은 더 어려워지고 복잡해지는 것은 덤이다.
 
-![NextJS 14의 Server Action은 php의 재림이라며 이미 많은 질타를 받고 있다.](/public/images/writings/2024/08/nextJS/image_5.png)
+![NextJS 14의 Server Action은 php의 재림이라며 이미 많은 질타를 받고 있다.](/images/writings/2024/08/nextJS/image_5.png)
 
 그러니 무조건 NextJS를 사용하는 것보다 SSR과 SSG가 꼭 필요한 어플리케이션에 사용하는 편이 좋다.
 

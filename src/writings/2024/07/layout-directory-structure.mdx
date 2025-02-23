@@ -6,7 +6,7 @@ tags:
   - FSD
 date: 2024-07-24
 description: "복잡한 디렉토리 구조는 그만! FSD를 사용해보자"
-thumbnail: /public/images/writings/2024/07/directory/thumbnail.png
+thumbnail: /images/writings/2024/07/directory/thumbnail.png
 ---
 
 # 디록토리 설계를 똑똑하게 하는 법
@@ -31,7 +31,7 @@ thumbnail: /public/images/writings/2024/07/directory/thumbnail.png
 
 위와 같은 구조의 대표적인 문제점은 폴더 중첩에 한계가 없다는 점이다. 그렇다고 모두 상위로 위치시키면 원하는 파일을 찾기 위해서 스크롤을 하염없이 내리게 될 수도 있다. 결국에는 자식 컴포넌트는 부모 컴포넌트 하위에 위치하게 되는 경우가 많다. 이런 폴더가 2-3개일때는 크게 불편함을 느끼지 못하지만 10개 이상이 되어가면 어느새 컴포넌트를 찾기 위해 컴포넌트 이름을 검색하게 된다.
 
-![모든 파일을 컴포넌트 폴더 하위에 둘 수 없는 노릇](/public/images/writings/2024/07/directory/image_1.webp)
+![모든 파일을 컴포넌트 폴더 하위에 둘 수 없는 노릇](/images/writings/2024/07/directory/image_1.webp)
 
 > 컴포넌트 폴더가 복잡해짐으로 import 문도 난잡해질뿐더러 무엇보다 DX가 저해된다.
 
@@ -52,7 +52,7 @@ thumbnail: /public/images/writings/2024/07/directory/thumbnail.png
 
 FSD는 크게 Layer와 Slice 그리고 Segment로 구성되어 있다. Layer 하위에 Slice가 존재하고 그 하위에 Segment가 위치힌다. 이 특징때문에 FSD 구조에서 폴더의 최대 깊이는 3으로 제한된다.
 
-![FSD의 디렉토리 구조](/public/images/writings/2024/07/directory/image_2.png)
+![FSD의 디렉토리 구조](/images/writings/2024/07/directory/image_2.png)
 
 이제 Layer와 Slice 그리고 Segment가 어떤 역할을 하는지 차근차근 알아보자.
 
