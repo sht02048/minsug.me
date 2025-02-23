@@ -7,13 +7,13 @@ tags:
   - proxy
 date: 2024-06-03
 description: "immer를 구현해보자"
-thumbnail: /src/assets/writings/2024/06/reference/thumbnail.webp
+thumbnail: /public/images/writings/2024/06/reference/thumbnail.webp
 ---
 
 # 참조타입 관리하기(feat immer)
 리액트에서 참조타입 상태(이하 객체 상태)를 다루다 보면 객체 속 값이 변경되었음에도 리렌더링이 이루어지지 않은 모습을 종종 볼 수 있다. 이 글에서는 이런 상황이 발생하는 이유와 객체 상태를 올바르게 다루는 법 그리고 그 방법 중 하나인 `useImmer`와 `immer`를 파헤처보도록 하겠다
 
-![상태는 변하지 않는 다이아몬드와 같아야 한다.](/src/assets/writings/2024/06/reference/thumbnail.webp)
+![상태는 변하지 않는 다이아몬드와 같아야 한다.](/public/images/writings/2024/06/reference/thumbnail.webp)
 
 ## 왜 불변성을 유지해야할까?
 결론부터 말하자면 리액트는 상태 객체 자체의 메모리 주소를 기억하고 있기 때문에 객체 내부에 있는 값이 아무리 바뀌어도 변경을 인지하지 못한다. 그렇기에 객체 상태를 업데이트하기 위해서는 객체의 속성을 변경하는 것이 아닌 아예 새로운 객체를 setter 함수에게 전달해줘야한다
