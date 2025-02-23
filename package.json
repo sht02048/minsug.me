@@ -7,7 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prepare": "husky"
+    "prepare": "husky",
+    "type-lint": "tsc --pretty --noEmit && eslint --fix"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.5",
@@ -36,10 +37,9 @@
   },
   "lint-staged": {
     "src/**/*.{ts,tsx,js,jsx,astro}": [
-      "eslint --fix",
-      "prettier --write"
+      "npm run type-lint"
     ],
-    "*.{md,json}": [
+    "*.{md, mdx, json}": [
       "prettier --write"
     ]
   }
