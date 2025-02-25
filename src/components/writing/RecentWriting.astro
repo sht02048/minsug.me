@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import PostLink from "./PostLink.astro";
+import PostLink from "../PostLink.astro";
 
 const recentWritings = await getCollection("writings").then((writings) =>
   writings
