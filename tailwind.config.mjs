@@ -3,6 +3,9 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      textDecorationThickness: {
+        half: "0.5px",
+      },
       colors: {
         background: "#111110",
         primary: "#eeeeec",

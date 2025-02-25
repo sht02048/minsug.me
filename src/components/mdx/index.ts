@@ -3,6 +3,7 @@ import Heading1 from "./Heading1.astro";
 import Heading2 from "./Heading2.astro";
 import Heading3 from "./Heading3.astro";
 import MdxImage from "./MdxImage.astro";
+import Link from "./Link.astro";
 
 const commonComponents = {
   h1: Heading1,
@@ -10,6 +11,7 @@ const commonComponents = {
   h3: Heading3,
   blockquote: BlockQuote,
   img: MdxImage,
+  a: Link,
 };
 
 export default commonComponents;
