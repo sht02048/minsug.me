@@ -1,7 +1,9 @@
 ---
+import Analytics from "@vercel/analytics/astro";
+
 import "../style/global.css";
-import BaseHead from "../components/base/head.astro";
 import type { Seo } from "../types/seo";
+import BaseHead from "../components/base/head.astro";
 
 type Props = {
   seo?: Seo;
@@ -14,6 +16,7 @@ const { seo } = Astro.props;
 <html lang="en" class="m-0 w-full h-full">
   <head>
     <BaseHead seo={seo} />
+    <Analytics />
   </head>
   <body class="m-0 w-full h-full bg-background text-primary">
     <slot />
