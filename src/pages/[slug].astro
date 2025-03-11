@@ -23,9 +23,10 @@ export const getStaticPaths = (async () => {
 
 const writing = Astro.props;
 const { Content } = await render(writing);
+const { title, description, thumbnail } = writing.data;
 ---
 
-<MainLayout>
+<MainLayout seo={{ title, description, image: thumbnail }}>
   <Header />
   <Prose>
     <Content components={commonComponents} />

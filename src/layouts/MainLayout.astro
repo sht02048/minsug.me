@@ -1,8 +1,15 @@
 ---
 import Layout from "./Layout.astro";
+import type { Seo } from "../types/seo";
+
+type Props = {
+  seo?: Seo;
+};
+
+const { seo } = Astro.props;
 ---
 
-<Layout>
+<Layout seo={seo}>
   <main
     class="mx-auto max-w-[692px] overflow-x-hidden px-6 py-12 text-gray-1200 antialiased sm:py-32 md:overflow-x-visible md:py-16"
   >

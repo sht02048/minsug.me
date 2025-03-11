@@ -1,14 +1,21 @@
 ---
 import { getCollection } from "astro:content";
 
+import type { Seo } from "../../types/seo";
 import Header from "../../components/Header.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import WritingList from "../../components/writing/WritingList.astro";
 
 const writings = await getCollection("writings");
+
+const seo: Seo = {
+  title: "writing",
+  description: "writing",
+  image: "./favicon.png",
+};
 ---
 
-<MainLayout>
+<MainLayout seo={seo}>
   <Header />
   <WritingList writings={writings} />
 </MainLayout>

@@ -1,15 +1,19 @@
 ---
 import "../style/global.css";
+import BaseHead from "../components/base/head.astro";
+import type { Seo } from "../types/seo";
+
+type Props = {
+  seo?: Seo;
+};
+
+const { seo } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="m-0 w-full h-full">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>minsug</title>
+    <BaseHead seo={seo} />
   </head>
   <body class="m-0 w-full h-full bg-background text-primary">
     <slot />
