@@ -1,7 +1,6 @@
 ---
 const heading = Astro.props;
 const headingId: string = heading.id;
-const trimmedHeading = headingId.replaceAll("-", " ");
 ---
 
 <a
@@ -9,6 +8,6 @@ const trimmedHeading = headingId.replaceAll("-", " ");
   class="mb-4 mt-16 inline-block w-fit no-underline md:mt-20"
 >
   <h3 id={headingId}>
-    {trimmedHeading}
+    <slot />
   </h3>
 </a>

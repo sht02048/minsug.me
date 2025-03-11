@@ -22,7 +22,6 @@ export default {
               fontSize: "1rem",
               fontWeight: 600,
               scrollMarginTop: "5rem",
-              textTransform: "capitalize",
             },
             p: {
               opacity: 90,
