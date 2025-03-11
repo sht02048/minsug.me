@@ -8,7 +8,9 @@ type Props = {
 
 const { seo } = Astro.props;
 
-const title = seo?.title || SITE_CONFIG.title;
+const title = seo?.title
+  ? SITE_CONFIG.titleTemplate.replace("%s", seo.title)
+  : SITE_CONFIG.title;
 const description = seo?.description || SITE_CONFIG.description;
 const image = seo?.image || SITE_CONFIG.avatar;
 
