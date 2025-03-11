@@ -1,9 +1,9 @@
 const SITE_CONFIG = {
   title: "minsug",
-  titleTemplate: "%s",
+  titleTemplate: "%s | minsug",
   description: "minsug의 기술 블로그",
   url: "https://minsug.me",
-  avatar: "/favicon.png",
+  avatar: "/qoo.png",
   author: {
     name: "minsug",
     bio: "frontend engineer",
