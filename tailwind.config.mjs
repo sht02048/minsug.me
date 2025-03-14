@@ -22,10 +22,13 @@ export default {
               fontSize: "1rem",
               fontWeight: 600,
               scrollMarginTop: "5rem",
+              color: "#eeeeec",
             },
             p: {
               opacity: 90,
               lineHeight: 1.65,
+              color: "#eeeeec",
+              opacity: 0.9,
             },
             "code::before": {
               content: "none",
