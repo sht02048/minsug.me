@@ -1,5 +1,15 @@
+---
+type Props = {
+  returnWriting?: boolean;
+};
+
+const { returnWriting } = Astro.props;
+
+const link = returnWriting ? "/writings" : "/";
+---
+
 <header class="mb-32 flex flex-col items-start">
-  <a class="text-medium inline-block font-medium no-underline" href="/"
+  <a class="text-medium inline-block font-medium no-underline" href={link}
     >Minsug Chae</a
   >
   <span class="font-medium leading-none text-secondary">FrontEnd Developer</span
